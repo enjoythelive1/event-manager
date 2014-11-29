@@ -42,7 +42,7 @@ object.trigger("event");
 
 ##Methods
 
-###on("eventName", listener) and addEventlistener("eventName", listener)
+### #on("eventName", listener) and #addEventlistener("eventName", listener)
 
 Register an event listener to the specified event.
 
@@ -56,7 +56,7 @@ emanager.addEventlistener("otherEvent", function () {
 });
 ```
 
-###off("eventname") and removeAllEventListener("eventName")
+### #off("eventname") and #removeAllEventListener("eventName")
 
 Removes all the event listeners for the especified event.
 
@@ -66,7 +66,7 @@ emanager.off("event");
 emanager.removeAllEventListener("otherEvent");
 ```
 
-###removeEventListener("event", listener)
+### #removeEventListener("event", listener)
 
 Remove the specified listener from the specified event.
 
@@ -83,7 +83,7 @@ emanager.trigger("event"); // Nothing will be logged
 
 ```
 
-###trigger("event", ...) and emmit("event", ...)
+### #trigger("event", ...) and #emmit("event", ...)
 
 Triggers the event specifies using the other arguments specified to call the other listeners.
 
@@ -115,7 +115,7 @@ That would result in:
 "evenOtherEvent" was called with parammeters: 1, 2, 3
 ```
 
-###once("event", listener)
+### #once("event", listener)
 
 Register an event listener, but it will only be called once.
 
