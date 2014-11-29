@@ -11,7 +11,6 @@ describe("EventManager", function () {
 
             emanager.on("test", function () {
                 passed = true;
-                console.log("pass");
             });
 
             emanager.trigger("test");
@@ -61,7 +60,7 @@ describe("EventManager", function () {
 
         it("Should unregister all the registered listener for only the event", function () {
             var called = false,
-                calledOther = fale,
+                calledOther = false,
                 emanager = new EventManager();
 
             emanager.on("test", function () {
@@ -74,6 +73,8 @@ describe("EventManager", function () {
             emanager.off("test")
 
             emanager.trigger("test");
+            emanager.trigger("test2");
+
 
             expect(called).to.be.false;
             expect(calledOther).to.be.true;
@@ -106,7 +107,7 @@ describe("EventManager", function () {
 
         it("Should unregister all the registered listener for only the event", function () {
             var called = false,
-                calledOther = fale,
+                calledOther = false,
                 emanager = new EventManager();
 
             emanager.on("test", function () {
@@ -119,6 +120,7 @@ describe("EventManager", function () {
             emanager.removeAllEventListener("test")
 
             emanager.trigger("test");
+            emanager.trigger("test2");
 
             expect(called).to.be.false;
             expect(calledOther).to.be.true;
@@ -253,9 +255,9 @@ describe("EventManager", function () {
             expect(allArguments.test2[0]).to.be.equal(1);
 
             expect(allArguments.test3).to.have.length(3);
-            expect(allArguments.test2[0]).to.be.equal(1);
-            expect(allArguments.test2[1]).to.be.equal(2);
-            expect(allArguments.test2[3]).to.be.equal("potato");
+            expect(allArguments.test3[0]).to.be.equal(1);
+            expect(allArguments.test3[1]).to.be.equal(2);
+            expect(allArguments.test3[2]).to.be.equal("potato");
 
         });
 
@@ -322,9 +324,9 @@ describe("EventManager", function () {
             expect(allArguments.test2[0]).to.be.equal(1);
 
             expect(allArguments.test3).to.have.length(3);
-            expect(allArguments.test2[0]).to.be.equal(1);
-            expect(allArguments.test2[1]).to.be.equal(2);
-            expect(allArguments.test2[3]).to.be.equal("potato");
+            expect(allArguments.test3[0]).to.be.equal(1);
+            expect(allArguments.test3[1]).to.be.equal(2);
+            expect(allArguments.test3[2]).to.be.equal("potato");
 
         });
 
@@ -336,7 +338,7 @@ describe("EventManager", function () {
                 emanager = new EventManager();
 
             emanager.once("test", function () {
-                passed += 1;
+                timesCalled += 1;
             });
 
             emanager.trigger("test");
