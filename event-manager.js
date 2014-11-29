@@ -45,7 +45,7 @@
                 self.events[event].forEach(function (e) {
                     e.apply(self.target, args);
                 });
-            }, 1);
+            }, 0);
         } else {
             this.events[event].forEach(function (e) {
                 e.apply(self.target, args);
