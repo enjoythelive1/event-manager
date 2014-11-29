@@ -40,6 +40,15 @@ object.trigger("event");
 //object.event(); // Does not work this way
 ```
 
+If you want the event triggering to be async you can set it this way by setting `emanager.async` to `true`:
+
+```javascrit
+var emanagerSync = new EventManager();
+
+var emanagerAsync = new EventManager();
+emanager.async = true;
+```
+
 ##Methods
 
 ### #on("eventName", listener) and #addEventlistener("eventName", listener)
