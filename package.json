@@ -1,0 +1,23 @@
+{
+  "name": "event-manager",
+  "version": "1.0.0",
+  "description": "Simple js module to work with custom events",
+  "main": "event-manager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enjoythelive1/event-manager.git"
+  },
+  "keywords": [
+    "event",
+    "custom"
+  ],
+  "author": "Fausto A. Guerrero <enjoythelive1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enjoythelive1/event-manager/issues"
+  },
+  "homepage": "https://github.com/enjoythelive1/event-manager"
+}
