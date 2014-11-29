@@ -40,12 +40,17 @@
         if (!this.events[event])
             return;
 
-
-        setTimeout(function () {
-            self.events[event].forEach(function (e) {
+        if (this.async) {
+            setTimeout(function () {
+                self.events[event].forEach(function (e) {
+                    e.apply(self.target, args);
+                });
+            }, 1);
+        } else {
+            this.events[event].forEach(function (e) {
                 e.apply(self.target, args);
             });
-        }, 1);
+        }
     };
 
     EventManager.prototype.once = function once(event, fn) {
