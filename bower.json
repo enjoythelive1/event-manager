@@ -1,0 +1,30 @@
+{
+  "name": "event-manager",
+  "main": "event-manager.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/enjoythelive1/event-manager",
+  "description": "Simple and lightweight event manager",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "event",
+    "on",
+    "addEventListener",
+    "on",
+    "once"
+  ],
+  "authors": [
+    "Fausto A. Guerrero <enjoythelive1@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
