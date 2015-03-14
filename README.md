@@ -48,6 +48,11 @@ var emanagerSync = new EventManager();
 var emanagerAsync = new EventManager();
 emanager.async = true;
 ```
+##Installation with bower
+
+```sh
+bower install event-manager
+```
 
 ##Methods
 
